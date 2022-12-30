@@ -16,7 +16,7 @@ jobs:
           gem --version
           sudo gem install bundler
           npm install --no-audit
-          npm run install-jekyll
+          sudo npm run install-jekyll
 
       - uses: helaili/jekyll-action@v2
         with:
