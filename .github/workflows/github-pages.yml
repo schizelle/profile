@@ -23,9 +23,13 @@ jobs:
           npm install -g npm@9.2.0
           npm install --no-audit
           npm run install-jekyll
+      
+      - name: Build website
+        run: |
+          cd site
+          bundle exec jekyll serve
 
-      - uses: helaili/jekyll-action@v2
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          gem_src: site
-          target_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site/_site
