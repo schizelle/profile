@@ -13,6 +13,8 @@ jobs:
 
       - name: Install website packages
         run: |
+          gem --version
+          gem install bundler
           npm install --no-audit
           npm run install-jekyll
 
