@@ -13,8 +13,7 @@ jobs:
 
       - name: Install website packages
         run: |
-          npm install
-          npm audit fix
+          npm install --no-audit
           npm run install-jekyll
 
       - uses: helaili/jekyll-action@v2
