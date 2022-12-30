@@ -27,4 +27,4 @@ jobs:
       - name: Build website
         run: |
           cd site
-          bundle exec jekyll serve
+          bundle exec jekyll build
